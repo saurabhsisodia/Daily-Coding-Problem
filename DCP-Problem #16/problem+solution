@@ -1,3 +1,16 @@
+You run an e-commerce website and want to record the last N order ids in a log. 
+Implement a data structure to accomplish this, with the following API: 
+  ..record(order_id): adds the order_id to the log
+  ..get_last(i): gets the ith last element from the log. i is guaranteed to be smaller than or equal to N.
+
+
+
+You should be as efficient with time and space as possible
+
+
+
+
+
 1. We have Fixed items i.e, N, so just create a circular array of max_size=N.
 2. Now we can maintain CURRENT which will point to the index where new item will be stored
 3. As it is circular so CURRENT = (CURRENT+1) % MAX_SIZE for next index.
