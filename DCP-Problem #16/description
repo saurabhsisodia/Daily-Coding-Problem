@@ -1,0 +1,4 @@
+1. We have Fixed items i.e, N, so just create a circular array of max_size=N.
+2. Now we can maintain CURRENT which will point to the index where new item will be stored
+3. As it is circular so CURRENT = (CURRENT+1) % MAX_SIZE for next index.
+4. To get the last i-th item, just get the item at index -> ( CURRENT - i + MAX_SIZE ) % MAX_SIZE i.e, buffer[(current - i + max_size) % max_size]
